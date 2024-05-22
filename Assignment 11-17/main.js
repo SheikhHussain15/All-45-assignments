@@ -48,17 +48,38 @@
 // guestlist.forEach(guest => {
 //    console.log(`Dear ${guest}, You are invited for dinner`);
 // });
-// Question 16
+//    // Question 16
 let guestlist = ['hussain', 'hassan', 'ali', 'ahmed'];
-console.log('Great news!, We found a bigger table');
-// Unshift
-guestlist.unshift('Hammad');
-// Splice
-guestlist.splice(Math.floor(guestlist.length / 2), 0, 'nouman');
-// push
-guestlist.push('Raza');
-console.log(guestlist);
-// Print a message 
-guestlist.forEach(guest => {
-    console.log(`Dear ${guest},You All are invited`);
+//       console.log('Great news!, We found a bigger table');
+// // Unshift
+// guestlist.unshift('Hammad')
+// // Splice
+// guestlist.splice(Math.floor(guestlist.length/2),0,'nouman')
+// // push
+// guestlist.push('Raza')
+// console.log(guestlist);
+// // Print a message 
+// guestlist.forEach(guest => {
+//    console.log(`Dear ${guest},You All are invited`);
+// });
+// Question no 17
+// print message
+console.log("unfortunatily! The new table was not arrived,So I only invited Only two guest");
+guestlist.unshift('Raza', 'Rehan');
+// Print updated List
+console.log('the updated list is:', guestlist);
+// Remove guest from list
+while (guestlist.length > 2) {
+    let removedGuest = guestlist.pop();
+    if (removedGuest != undefined) {
+        console.log(`Sorry,${removedGuest}, We cant invited you.`);
+    }
+}
+// message a guest who are still invited 
+guestlist.forEach(guests => {
+    console.log(`Dear ${guests},you arre still invited`);
 });
+// empty guest list
+guestlist.splice(0, guestlist.length);
+// Updated list
+console.log('The updated list is:', guestlist);
